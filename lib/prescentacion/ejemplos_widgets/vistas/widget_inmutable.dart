@@ -1,4 +1,5 @@
 import 'package:clase_de_prueba/prescentacion/ejemplos_widgets/widgets/widgets.dart';
+import 'package:clase_de_prueba/prescentacion/utilidades/es_tema_oscuro.dart';
 import 'package:flutter/material.dart';
 
 class WidgetInmutable extends StatelessWidget {
@@ -6,6 +7,13 @@ class WidgetInmutable extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // final pagoConEfectivo = PagoConEfectivo()
+    //   ..pagarReserva(100)
+    //   ..procesarPago(200);
+
+    // final pagoConTarjeta = PagoConTarjeta()..emitirFactura();
+    //pedirComida(PlatoPrincipal(nombre: 'Bandeja Paisa', precio: 12000));
+
     List<String> listaDeNombres = [
       'Juan',
       'Pedro',
@@ -25,7 +33,11 @@ class WidgetInmutable extends StatelessWidget {
         onPressed: () {
           Navigator.pushNamed(context, '/widget-mutable');
         },
-        child: const Icon(Icons.arrow_forward_ios_rounded),
+        child: Icon(
+          Icons.arrow_forward_ios_rounded,
+          color:
+              context.esTemaOscuro == true ? Colors.white : Colors.deepPurple,
+        ),
       ),
     );
   }

@@ -51,6 +51,7 @@ class _WidgetMutableState extends State<WidgetMutable> {
 
   @override
   Widget build(BuildContext context) {
+    log('Se ha construido el widget');
     return Scaffold(
       appBar: AppBar(
         title: const Text('Widget Mutable'),
